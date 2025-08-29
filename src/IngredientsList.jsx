@@ -3,11 +3,12 @@ export default function IngredientsList(props) {
     <li key={ingredient}>{ingredient}</li>
   ));
   return (
-    <section>
+    <section className="ingredient-list">
       <h2>Ingredients on hand:</h2>
       <ul className="ingredients-list" aria-live="polite">
         {ingredientsListItems}
       </ul>
+      <button onClick={props.clearIngredient}>Clear All</button>
       {props.ingredients.length > 3 && (
         <div className="get-recipe-container">
           <div>

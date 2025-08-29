@@ -5,9 +5,8 @@ import getRecipeFromChefClaude from "./ai";
 
 export default function Main() {
   const [ingredients, setIngredients] = React.useState([
-    "chicken",
+    "beef",
     "all the main spices",
-    "corn",
     "heavy cream",
     "pasta",
   ]);
@@ -23,6 +22,11 @@ export default function Main() {
     setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
   }
 
+  function clearIngredient() {
+    setIngredients([]);
+    setRecipe("");
+  }
+
   return (
     <main>
       <form action={addIngredient} className="add-ingredient-form">
@@ -36,7 +40,11 @@ export default function Main() {
       </form>
 
       {ingredients.length > 0 && (
-        <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />
+        <IngredientsList
+          ingredients={ingredients}
+          clearIngredient={clearIngredient}
+          getRecipe={getRecipe}
+        />
       )}
 
       {recipe && <ClaudeRecipe recipe={recipe} />}
