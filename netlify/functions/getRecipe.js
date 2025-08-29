@@ -7,7 +7,7 @@ ingredients.
 You don't need to use every ingredient they mention in your recipe. 
 The recipe can include additional ingredients they didn't mention, 
 but try not to include too many extra ingredients. 
-Search a photo of the final dish that looks delicious and include it in the response.
+Search a photo of the final dish on Unsplash and include it in the response.
 Format your response in markdown to make it easier to render to a web page.
 `;
 

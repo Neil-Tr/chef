@@ -5,7 +5,7 @@ import getRecipeFromChefClaude from "./ai";
 
 export default function Main() {
   const [ingredients, setIngredients] = React.useState([
-    "beef",
+    "pork",
     "all the main spices",
     "heavy cream",
     "pasta",
